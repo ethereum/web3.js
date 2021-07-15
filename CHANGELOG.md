@@ -350,17 +350,55 @@ Released with 1.0.0-beta.37 code base.
 - Deprecation of bzz warning (#3872)
 - Deprecation of shh warning (#3888)
 
-## [Unreleased]
-
 ## [1.3.5]
 
 ### Added
 
 - Github action for running tests for `web3-eth2-core` and `web3-eth2-beaconchain` packages (#3892)
+- Added description to documentation on how to connect using a remote node provider (#3884)
 - Added Security risk warning to docs for `web3.utils.soliditySha3` (#3908)
+- `.nvmrc` file using Node.js version `v.14.15.1` (#3817)
+- Add commitment to semantic versioning since version `1.3.0` and onwards (#3961)
 
 ### Changed
 
 - Unified babel compiler for `web3-eth2-core` and `web3-eth2-beaconchain` (#3892)
+- Renamed the `tsc` script in all packages to `compile`; updates the corresponding `lerna run` usage in the main `package.json` (#3894)
+- moved deprecation warnings to postinstall scripts (#3917)
 - Upgrade `@chainsafe/geth-dev-assistant` from `0.1.5` to `0.1.9` (#3950)
 - Replaced hardcoded infura link with Github Secret for some tests (#3943)
+- Bump `elliptic` from `6.5.3` to `6.5.4` for `web3-eth-accounts` (#3941)
+- Bump `elliptic` from `6.5.3` to `6.5.4` for `web3-bzz` (#3940)
+- Bump `elliptic` from `6.5.3` to `6.5.4` for `web3-core-requestmanager` (#3945)
+- Rewrite `web3-eth-iban` in ES6 (#3955)
+
+## [1.3.6]
+
+### Changes
+
+- Bump `underscore` package from `1.9.1` to `1.12.1` (#4051)
+- Bump `@ensdomains/ens` package from `^0.4.5` to `^0.6.0` (#4059)
+- Bump `ethers` package from `^5.0.18` to `^5.1.4` (#4059)
+
+### Removes
+
+- Accidental commit (yarn-error.log) (#4062)
+
+## [1.4.0]
+
+### Added
+
+- Berlin Transaction Support (#4083)
+- When signing a transaction, common object now defaults to berlin instead of petersburg
+
+### Changed
+
+- Changed Geth Docker verision from `stable` to `1.10.3` in `e2e.geth.instamine.sh` and `scripts/e2e.geth.automine.sh` (#4154)
+
+## [1.4.1]
+
+### Removes
+
+- Removing the underscore package 
+
+## [Unreleased]

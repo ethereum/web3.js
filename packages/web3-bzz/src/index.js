@@ -22,15 +22,10 @@
 
 "use strict";
 
-var _ = require('underscore');
 var swarm = require("swarm-js");
 
 
 var Bzz = function Bzz(provider) {
-
-
-    console.warn('web3-bzz package will be deprecated in version 1.3.5 and will no longer be supported.')
-
 
     this.givenProvider = Bzz.givenProvider;
 
@@ -56,7 +51,7 @@ if (typeof ethereum !== 'undefined' && ethereum.bzz) {
 
 Bzz.prototype.setProvider = function(provider) {
     // is ethereum provider
-    if(_.isObject(provider) && _.isString(provider.bzz)) {
+    if(!!provider && typeof provider === 'object' && typeof provider.bzz === 'string') {
         provider = provider.bzz;
     // is no string, set default
     }
@@ -65,7 +60,7 @@ Bzz.prototype.setProvider = function(provider) {
     // }
 
 
-    if(_.isString(provider)) {
+    if(typeof provider === 'string') {
         this.currentProvider = provider;
     } else {
         this.currentProvider = null;
